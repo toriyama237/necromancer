@@ -1,0 +1,34 @@
+name: Feature
+description: A new capability, ideally backed by a Kiro spec.
+title: "feat: "
+labels: ["type: feat"]
+body:
+  - type: textarea
+    id: story
+    attributes:
+      label: User story
+      description: As a <role>, I want <capability>, so that <benefit>.
+    validations:
+      required: true
+  - type: textarea
+    id: criteria
+    attributes:
+      label: Acceptance criteria (EARS)
+      description: WHEN [condition/event] THE SYSTEM SHALL [expected behavior]
+    validations:
+      required: true
+  - type: dropdown
+    id: criterion
+    attributes:
+      label: Judging criterion served
+      multiple: true
+      options: [Potential Impact, Technological Implementation, Design, Innovation, Presentation]
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options: [tape, seance, freezer, crypt, sarcophagus, server, mcp, cli, bank, cobol, ui, power, crew, ci, docs]
+    validations:
+      required: true

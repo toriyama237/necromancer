@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Refuse direct pushes to protected branches (they only change through PRs).
+set -euo pipefail
+while read -r _ _ remote_ref _; do
+  case "$remote_ref" in
+    refs/heads/main|refs/heads/develop)
+      echo "✖ Direct push to ${remote_ref#refs/heads/} is not allowed. Open a pull request." >&2
+      exit 1 ;;
+  esac
+done

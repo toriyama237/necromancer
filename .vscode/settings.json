@@ -1,0 +1,6 @@
+{
+  "editor.formatOnSave": true,
+  "rust-analyzer.check.command": "clippy",
+  "files.trimTrailingWhitespace": true,
+  "[cobol]": { "editor.rulers": [7, 72], "files.trimTrailingWhitespace": false }
+}

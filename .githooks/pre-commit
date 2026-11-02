@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Fast checks before each commit. Full checks run in CI.
+set -euo pipefail
+if git diff --cached --name-only | grep -q '\.rs$'; then
+  cargo fmt --all -- --check || { echo "✖ Run 'make fmt' before committing." >&2; exit 1; }
+fi
+./scripts/check-compliance.sh

@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+# Enforces Conventional Commits: type(scope)!: subject
+set -euo pipefail
+msg_file="$1"
+first_line="$(head -n1 "$msg_file")"
+
+# Allow git-generated messages.
+if [[ "$first_line" =~ ^(Merge|Revert\ \"|fixup!|squash!) ]]; then
+  exit 0
+fi
+
+pattern='^(feat|fix|perf|refactor|test|docs|build|ci|chore|revert|release)(\([a-z0-9-]+\))?!?: [a-z].{0,70}[^.]$'
+if ! [[ "$first_line" =~ $pattern ]]; then
+  cat >&2 <<MSG
+✖ Commit message does not follow Conventional Commits.
+
+  Got:      $first_line
+  Expected: type(scope): subject   (lowercase subject, max 72 chars, no trailing period)
+
+  Types:  feat fix perf refactor test docs build ci chore revert release
+  Scopes: tape seance freezer crypt sarcophagus server mcp cli bank cobol ui power crew kiro ci docs deps
+  Example: feat(seance): replay postgres extended query protocol
+
+See CONTRIBUTING.md.
+MSG
+  exit 1
+fi

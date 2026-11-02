@@ -24,4 +24,5 @@ Kept current by the `judging-alignment` hook.
 - [ ] Blog post mentioning Kiroween 2026 (published before deadline)
 - [ ] Social post starting with `#KiroweenHackathon26` (written personally)
 - [ ] Kiro credits requested before 2026-12-01 12:00 PT, redeemed before 2026-12-04
+- [ ] `main` released from `develop` with the final state (judges see the default branch)
 - [ ] Submitted before 2026-12-04 14:00 PT (target: 2026-12-03)

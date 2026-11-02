@@ -1,0 +1,30 @@
+name: Bug
+description: Something in Necromancer itself does not work as specified.
+title: "fix: "
+labels: ["type: fix"]
+body:
+  - type: textarea
+    id: current
+    attributes:
+      label: Current behavior
+      description: WHEN [condition] THEN the system [incorrect behavior]
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: WHEN [condition] THEN the system SHALL [correct behavior]
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce (or tape id)
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options: [tape, seance, freezer, crypt, sarcophagus, server, mcp, cli, bank, cobol, ui, power, crew, ci, docs]
+    validations:
+      required: true

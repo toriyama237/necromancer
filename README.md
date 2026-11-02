@@ -1,5 +1,9 @@
 # Necromancer
 
+[![CI](https://github.com/toriyama237/necromancer/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/toriyama237/necromancer/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Conventional Commits](https://img.shields.io/badge/commits-conventional-fe5196.svg)](https://www.conventionalcommits.org/en/v1.0.0/)
+
 > **No bug stays dead.**
 
 Necromancer captures every request that dies in production, **resurrects it
@@ -38,9 +42,13 @@ See [`.kiro/steering/structure.md`](.kiro/steering/structure.md) and
 
 ## Quick start
 ```bash
-cargo check --workspace
+make setup
+make check
 docker compose -f deploy/docker-compose.yml up
 ```
+
+## Contributing
+Branching model, commit conventions and release process: [`CONTRIBUTING.md`](CONTRIBUTING.md).
 
 ## Built with Kiro
 Specs, steering, hooks, MCP, a Kiro power and a Kiro Crew app.
