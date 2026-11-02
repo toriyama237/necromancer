@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "necromancer": {
+      "command": "cargo",
+      "args": ["run", "--quiet", "-p", "necro-mcp"],
+      "env": {
+        "NECRO_CRYPT": "tapes/crypt.db"
+      },
+      "disabled": true,
+      "autoApprove": ["list_graves", "get_tape"]
+    }
+  }
+}

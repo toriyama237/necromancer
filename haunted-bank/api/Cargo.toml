@@ -1,0 +1,13 @@
+[package]
+name = "haunted-bank-api"
+description = "The Haunted Bank: demo system spanning 1959 to 2026."
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+publish = false
+
+[lints]
+workspace = true
+
+[dependencies]

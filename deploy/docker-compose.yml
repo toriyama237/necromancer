@@ -1,0 +1,20 @@
+# Demo stack. Services marked TODO are filled in by their specs.
+name: necromancer
+
+services:
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: bank
+      POSTGRES_PASSWORD: bank
+      POSTGRES_DB: haunted_bank
+    volumes:
+      - ../haunted-bank/db/migrations:/docker-entrypoint-initdb.d:ro
+    ports:
+      - "5432:5432"
+
+  # TODO(haunted-bank spec): ftp server (passive mode)
+  # TODO(haunted-bank spec): haunted-bank-api
+  # TODO(haunted-bank spec): settlement batch (GnuCOBOL)
+  # TODO(seance-proxy spec): seance-proxy in capture mode in front of postgres + ftp
+  # TODO(necro-server spec): necro-server + necropolis UI

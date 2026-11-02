@@ -1,0 +1,13 @@
+{
+  "version": "v1",
+  "hooks": [
+    {
+      "name": "rust-fmt-and-check",
+      "description": "Format and type-check the workspace whenever a Rust file is saved.",
+      "trigger": "PostFileSave",
+      "matcher": "\\.rs$",
+      "action": { "type": "command", "command": "cargo fmt --all && cargo check --workspace --quiet" },
+      "timeout": 180
+    }
+  ]
+}

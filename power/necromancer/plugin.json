@@ -1,0 +1,11 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "necromancer",
+  "version": "0.1.0",
+  "description": "Resurrect production failures byte-for-byte, find the root cause and prove the fix by replaying the exact traffic that died.",
+  "author": {
+    "name": "Necromancer"
+  },
+  "keywords": ["incident", "replay", "debugging", "production error", "reproduce bug", "cobol", "legacy", "on-call"],
+  "license": "MIT"
+}

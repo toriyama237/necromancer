@@ -1,0 +1,13 @@
+[package]
+name = "necro-tape"
+description = "Tape format: the complete, replayable record of one request's life and death."
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+publish = false
+
+[lints]
+workspace = true
+
+[dependencies]

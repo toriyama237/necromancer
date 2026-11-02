@@ -1,0 +1,13 @@
+{
+  "version": "v1",
+  "hooks": [
+    {
+      "name": "cobol-compile",
+      "description": "Compile the settlement batch in the GnuCOBOL container when COBOL sources change.",
+      "trigger": "PostFileSave",
+      "matcher": "\\.(cbl|cpy)$",
+      "action": { "type": "command", "command": "make -C haunted-bank/settlement build" },
+      "timeout": 180
+    }
+  ]
+}

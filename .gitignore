@@ -1,0 +1,23 @@
+# Rust
+/target/
+**/*.rs.bk
+
+# Node
+node_modules/
+web/necropolis/.svelte-kit/
+web/necropolis/build/
+
+# Runtime data
+*.db
+*.db-wal
+*.db-shm
+/tapes/
+/haunted-bank/settlement/build/
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# NOTE: the /.kiro directory MUST stay versioned (hackathon requirement).
+# Never add .kiro or any of its sub-folders here.

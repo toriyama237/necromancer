@@ -1,0 +1,17 @@
+[package]
+name = "time-freezer"
+description = "LD_PRELOAD shim that freezes time and randomness to the values recorded on a tape."
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+publish = false
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+# Overrides the workspace lint table: an LD_PRELOAD shim needs unsafe FFI.
+[lints.rust]
+unsafe_code = "allow"
+
+[dependencies]

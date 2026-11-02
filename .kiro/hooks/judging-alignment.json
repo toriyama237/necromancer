@@ -1,0 +1,15 @@
+{
+  "version": "v1",
+  "hooks": [
+    {
+      "name": "judging-alignment",
+      "description": "When a spec's task list changes, keep the judging map and Kiro usage write-up honest and current.",
+      "trigger": "PostFileSave",
+      "matcher": "\\.kiro/specs/.*/tasks\\.md$",
+      "action": {
+        "type": "agent",
+        "prompt": "A spec task list was just updated. Update docs/JUDGING.md so each completed task is mapped to the judging criterion it serves, and append a dated, factual entry to the journal section of docs/KIRO_USAGE.md describing which Kiro feature was used and what it changed. Do not invent anything that did not happen."
+      }
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+[workspace]
+resolver = "3"
+members = [
+    "crates/necro-tape",
+    "crates/seance-proxy",
+    "crates/time-freezer",
+    "crates/crypt",
+    "crates/sarcophagus",
+    "crates/necro-server",
+    "crates/necro-mcp",
+    "crates/necro-cli",
+    "haunted-bank/api",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+license = "MIT"
+repository = "https://github.com/toriyama237/necromancer"
+rust-version = "1.85"
+
+# Shared dependency versions. Members opt in with `dep = { workspace = true }`.
+# Protocol / MCP / TUI crates (pgwire, rmcp, ratatui, ...) are added with
+# `cargo add` when the corresponding spec is implemented.
+[workspace.dependencies]
+necro-tape = { path = "crates/necro-tape" }
+crypt = { path = "crates/crypt" }
+sarcophagus = { path = "crates/sarcophagus" }
+tokio = { version = "1", features = ["full"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+anyhow = "1"
+thiserror = "2"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+clap = { version = "4", features = ["derive"] }
+uuid = { version = "1", features = ["v7", "serde"] }
+proptest = "1"
+
+[workspace.lints.rust]
+unsafe_code = "deny"
+
+[workspace.lints.clippy]
+unwrap_used = "warn"
+
+[profile.release]
+lto = "thin"

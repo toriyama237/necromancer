@@ -1,0 +1,15 @@
+{
+  "version": "v1",
+  "hooks": [
+    {
+      "name": "tape-format-guard",
+      "description": "The tape format is the contract between every component. Guard it.",
+      "trigger": "PostFileSave",
+      "matcher": "crates/necro-tape/.*\\.rs$",
+      "action": {
+        "type": "agent",
+        "prompt": "The tape format in crates/necro-tape just changed. 1) Check every consumer crate (seance-proxy, crypt, sarcophagus, necro-server, necro-mcp) still compiles against it. 2) Make sure the proptest round-trip property decode(encode(tape)) == tape covers any new field. 3) Summarize the change in one line."
+      }
+    }
+  ]
+}

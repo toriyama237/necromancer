@@ -1,0 +1,13 @@
+[package]
+name = "necro-cli"
+description = "necro: on-call terminal client with a 3270-style green-screen TUI."
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+publish = false
+
+[lints]
+workspace = true
+
+[dependencies]
