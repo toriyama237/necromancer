@@ -3,6 +3,13 @@
 [![CI](https://github.com/toriyama237/necromancer/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/toriyama237/necromancer/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Conventional Commits](https://img.shields.io/badge/commits-conventional-fe5196.svg)](https://www.conventionalcommits.org/en/v1.0.0/)
+[![Kiroween 2026](https://img.shields.io/badge/Kiroween-2026-ff7518.svg)](https://kiroween.devpost.com/)
+[![Built with Kiro](https://img.shields.io/badge/built%20with-Kiro-7057ff.svg)](https://kiro.dev/)
+[![Category: Frankenstein](https://img.shields.io/badge/category-Frankenstein-2ea44f.svg)](#)
+[![Rust 2024](https://img.shields.io/badge/rust-2024%20edition-dea584.svg?logo=rust)](https://www.rust-lang.org/)
+[![Open issues](https://img.shields.io/github/issues/toriyama237/necromancer.svg)](https://github.com/toriyama237/necromancer/issues)
+[![Last commit](https://img.shields.io/github/last-commit/toriyama237/necromancer/develop.svg)](https://github.com/toriyama237/necromancer/commits/develop)
+[![Kiro Crew app](https://img.shields.io/badge/Kiro%20Crew-necromancer--crew-7057ff.svg)](https://github.com/toriyama237/necromancer-crew)
 
 > **No bug stays dead.**
 
